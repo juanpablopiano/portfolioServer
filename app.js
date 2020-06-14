@@ -7,11 +7,12 @@ const cors = require("cors");
 
 app.set("view engine", "pug");
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
 app.use("/static", express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.get("/", (req, res) => {
-	res.render(`index`);
+	res.render('index');
 });
 
 app.get("/api", (req, res) => {
