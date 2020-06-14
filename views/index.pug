@@ -1,116 +1,162 @@
 include includes/head
 
-body
-	section#title
-		.container-fluid
-			// Nav Bar
-			nav.navbar.navbar-expand-lg.navbar-dark
-				a.navbar-brand(href='') Portfolio
-				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-					span.navbar-toggler-icon
-				#navbarSupportedContent.collapse.navbar-collapse
-					ul.navbar-nav.ml-auto
-						li.nav-item
-							a.nav-link(href='#footer') Contact
-						li.nav-item
-							a.nav-link(href='#pricing') Projects
-						li.nav-item
-							a.nav-link(href='#cta') Login
-			// Title
-			.row
-				.col-lg-6
-					h1 See all my projects here
-					button.btn.btn-dark.btn-lg.download-button(type='button')
-						i.fab.fa-apple
-						|  Download
-					button.btn.btn-outline-light.btn-lg.download-button(type='button')
-						i.fab.fa-google-play
-						|  Download
-	// Features
-	section#features
-		.row
-			.feature-box.col-lg-4
-				i.icon.fas.fa-check-circle.fa-4x
-				h3 Easy to use.
-				p So easy to use, even your dog could do it.
-			.feature-box.col-lg-4
-				i.icon.fas.fa-bullseye.fa-4x
-				h3 Elite Clientele
-				p We have all the dogs, the greatest dogs.
-			.feature-box.col-lg-4
-				i.icon.fas.fa-heart.fa-4x
-				h3 Guaranteed to work.
-				p Find the love of your dog&apos;s life or your money back.
-	// Testimonials
-	section#testimonials
-		#testimonial-carousel.carousel.slide(data-ride='false')
-			.carousel-inner
-				.carousel-item.active
-					h2.testimonial-text
-						| I no longer have to sniff other dogs for love. I&apos;ve found the hottest Corgi on TinDog. Woof.
-					img.testimonial-image(src='images/dog-img.jpg' alt='dog-profile')
-					em Pebbles, New York
-				.carousel-item
-					h2.testimonial-text
-						| My dog used to be so lonely, but with TinDog&apos;s help, they&apos;ve found the love of their life. I think.
-					img.testimonial-image(src='images/lady-img.jpg' alt='lady-profile')
-					em Beverly, Illinois
-			a.carousel-control-prev(href='#testimonial-carousel' role='button' data-slide='prev')
-				span.carousel-control-prev-icon(aria-hidden='true')
-				span.sr-only Previous
-			a.carousel-control-next(href='#testimonial-carousel' role='button' data-slide='next')
-				span.carousel-control-next-icon(aria-hidden='true')
-				span.sr-only Next
-	// Press
-	section#press
-		img.press-log(src='images/techcrunch.png' alt='tc-logo')
-		img.press-log(src='images/tnw.png' alt='tnw-logo')
-		img.press-log(src='images/bizinsider.png' alt='biz-insider-logo')
-		img.press-log(src='images/mashable.png' alt='mashable-logo')
-	// Pricing
-	section#pricing
-		h2 A Plan for Every Dog&apos;s Needs
-		p Simple and affordable price plans for your and your dog.
-		.row
-			.pricing-column.col-lg-4.col-md-6
-				.card
-					.card-header
-						h3 Chihuahua
-					.card-body
-						h2 Free
-						p 5 Matches Per Day
-						p 10 Messages Per Day
-						p Unlimited App Usage
-						button.btn.btn-lg.btn-block.btn-outline-dark(type='button') Sign Up
-			.pricing-column.col-lg-4.col-md-6
-				.card
-					.card-header
-						h3 Labrador
-					.card-body
-						h2 $49 / mo
-						p Unlimited Matches
-						p Unlimited Messages
-						p Unlimited App Usage
-						button.btn.btn-lg.btn-block.btn-dark(type='button') Sign Up
-			.pricing-column.col-lg-4
-				.card
-					.card-header
-						h3 Mastiff
-					.card-body
-						h2 $99 / mo
-						p Pirority Listing
-						p Unlimited Matches
-						p Unlimited Messages
-						p Unlimited App Usage
-						button.btn.btn-lg.btn-block.btn-dark(type='button') Sign Up
-	// Call to Action
-	section#cta
-		h3.cta-heading Find the True Love of Your Dog&apos;s Life Today.
-		button.download-button.btn.btn-lg.btn-dark(type='button')
-			i.fab.fa-apple
-			| Download
-		button.download-button.btn.btn-lg.btn-light(type='button')
-			i.fab.fa-google-play
-			| Download
-	
+body.is-preload
+	// Wrapper
+	#wrapper
+		// Header
+		header#header.alt
+			a.logo(href='/')
+				strong jppiano-portfolio
+			nav
+				a(href='#menu') Menu
+		// Menu
+		nav#menu
+			ul.links
+				li
+					a(href='index.html') Home
+				li
+					a(href='landing.html') Projects
+				li
+					a(href='generic.html') Contact
+			ul.actions.stacked
+				li
+					a.button.primary.fit(href='#') Get Started
+				li
+					a.button.fit(href='#') Log In
+		// Banner
+		section#banner.major
+			.inner
+				header.major
+					h1 Hi, my name is Juan
+				.content
+					p
+						| I build beautiful websites
+						br
+						| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and powerful single-page applications.
+					ul.actions
+						li
+							a.button.next.scrolly(href='#contact') Contact Me
+		// Main
+		#main
+			// One
+			section#one.tiles
+				article
+					span.image
+						img(src='images/pic01.jpg' alt='')
+					header.major
+						h3
+							a.link(href='landing.html') Aliquam
+						p Ipsum dolor sit amet
+				article
+					span.image
+						img(src='images/pic02.jpg' alt='')
+					header.major
+						h3
+							a.link(href='landing.html') Tempus
+						p feugiat amet tempus
+				article
+					span.image
+						img(src='images/pic03.jpg' alt='')
+					header.major
+						h3
+							a.link(href='landing.html') Magna
+						p Lorem etiam nullam
+				article
+					span.image
+						img(src='images/pic04.jpg' alt='')
+					header.major
+						h3
+							a.link(href='landing.html') Ipsum
+						p Nisl sed aliquam
+				article
+					span.image
+						img(src='images/pic05.jpg' alt='')
+					header.major
+						h3
+							a.link(href='landing.html') Consequat
+						p Ipsum dolor sit amet
+				article
+					span.image
+						img(src='images/pic06.jpg' alt='')
+					header.major
+						h3
+							a.link(href='landing.html') Etiam
+						p Feugiat amet tempus
+			// Two
+			section#two
+				.inner
+					header.major
+						h2 Massa libero
+					p
+						| Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+					ul.actions
+						li
+							a.button.next(href='landing.html') Get Started
+		// Contact
+		section#contact
+			.inner
+				section
+					form(method='post' action='#')
+						.fields
+							.field.half
+								label(for='name') Name
+								input#name(type='text' name='name')
+							.field.half
+								label(for='email') Email
+								input#email(type='text' name='email')
+							.field
+								label(for='message') Message
+								textarea#message(name='message' rows='6')
+						ul.actions
+							li
+								input.primary(type='submit' value='Send Message')
+							li
+								input(type='reset' value='Clear')
+				section.split
+					section
+						.contact-method
+							span.icon.solid.alt.fa-envelope
+							h3 Email
+							a(href='mailto: jgu1@hotmail.com') jgu1@hotmail.com
+					section
+						.contact-method
+							span.icon.solid.alt.fa-phone
+							h3 Phone
+							span
+								a(href="tel:56946702324") (+56) 9 4670 2324
+					section
+						.contact-method
+							span.icon.solid.alt.fa-home
+							h3 Address
+							span
+								| 1234 Somewhere Road #5432
+								br
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Nashville, TN 00000
+								br
+								| &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;United States of America
+		// Footer
+		footer#footer.text-center
+			.inner
+				ul.icons
+					//- li
+					//- 	a.icon.brands.alt.fa-twitter(href='#')
+					//- 		span.label Twitter
+					//- li
+					//- 	a.icon.brands.alt.fa-facebook-f(href='#')
+					//- 		span.label Facebook
+					//- li
+					//- 	a.icon.brands.alt.fa-instagram(href='#')
+					//- 		span.label Instagram
+					li
+						a.icon.brands.alt.fa-github(href='https://github.com/juanpablopiano' target="_blank")
+							span.label GitHub
+					li
+						a.icon.brands.alt.fa-linkedin-in(href='https://www.linkedin.com/in/juanpabloing/' target="_blank")
+							span.label LinkedIn
+				ul.copyright
+					li &copy; Untitled
+					li
+						| Design: 
+						a(href='https://html5up.net') HTML5 UP
+
 include includes/footer
