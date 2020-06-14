@@ -11,7 +11,7 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.get("/", (req, res) => {
-	res.sendFile(`${__dirname}/public/index.html`);
+	res.render(`index`);
 });
 
 app.get("/api", (req, res) => {
@@ -24,7 +24,7 @@ app.get("/api", (req, res) => {
 });
 
 app.get('*', (req, res) => {
-	res.send('In construction...');
+	res.render('construction');
 });
 
 app.listen(process.env.PORT, () =>

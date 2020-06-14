@@ -1,0 +1,116 @@
+include includes/head
+
+body
+	section#title
+		.container-fluid
+			// Nav Bar
+			nav.navbar.navbar-expand-lg.navbar-dark
+				a.navbar-brand(href='') Portfolio
+				button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+				#navbarSupportedContent.collapse.navbar-collapse
+					ul.navbar-nav.ml-auto
+						li.nav-item
+							a.nav-link(href='#footer') Contact
+						li.nav-item
+							a.nav-link(href='#pricing') Projects
+						li.nav-item
+							a.nav-link(href='#cta') Login
+			// Title
+			.row
+				.col-lg-6
+					h1 See all my projects here
+					button.btn.btn-dark.btn-lg.download-button(type='button')
+						i.fab.fa-apple
+						|  Download
+					button.btn.btn-outline-light.btn-lg.download-button(type='button')
+						i.fab.fa-google-play
+						|  Download
+	// Features
+	section#features
+		.row
+			.feature-box.col-lg-4
+				i.icon.fas.fa-check-circle.fa-4x
+				h3 Easy to use.
+				p So easy to use, even your dog could do it.
+			.feature-box.col-lg-4
+				i.icon.fas.fa-bullseye.fa-4x
+				h3 Elite Clientele
+				p We have all the dogs, the greatest dogs.
+			.feature-box.col-lg-4
+				i.icon.fas.fa-heart.fa-4x
+				h3 Guaranteed to work.
+				p Find the love of your dog&apos;s life or your money back.
+	// Testimonials
+	section#testimonials
+		#testimonial-carousel.carousel.slide(data-ride='false')
+			.carousel-inner
+				.carousel-item.active
+					h2.testimonial-text
+						| I no longer have to sniff other dogs for love. I&apos;ve found the hottest Corgi on TinDog. Woof.
+					img.testimonial-image(src='images/dog-img.jpg' alt='dog-profile')
+					em Pebbles, New York
+				.carousel-item
+					h2.testimonial-text
+						| My dog used to be so lonely, but with TinDog&apos;s help, they&apos;ve found the love of their life. I think.
+					img.testimonial-image(src='images/lady-img.jpg' alt='lady-profile')
+					em Beverly, Illinois
+			a.carousel-control-prev(href='#testimonial-carousel' role='button' data-slide='prev')
+				span.carousel-control-prev-icon(aria-hidden='true')
+				span.sr-only Previous
+			a.carousel-control-next(href='#testimonial-carousel' role='button' data-slide='next')
+				span.carousel-control-next-icon(aria-hidden='true')
+				span.sr-only Next
+	// Press
+	section#press
+		img.press-log(src='images/techcrunch.png' alt='tc-logo')
+		img.press-log(src='images/tnw.png' alt='tnw-logo')
+		img.press-log(src='images/bizinsider.png' alt='biz-insider-logo')
+		img.press-log(src='images/mashable.png' alt='mashable-logo')
+	// Pricing
+	section#pricing
+		h2 A Plan for Every Dog&apos;s Needs
+		p Simple and affordable price plans for your and your dog.
+		.row
+			.pricing-column.col-lg-4.col-md-6
+				.card
+					.card-header
+						h3 Chihuahua
+					.card-body
+						h2 Free
+						p 5 Matches Per Day
+						p 10 Messages Per Day
+						p Unlimited App Usage
+						button.btn.btn-lg.btn-block.btn-outline-dark(type='button') Sign Up
+			.pricing-column.col-lg-4.col-md-6
+				.card
+					.card-header
+						h3 Labrador
+					.card-body
+						h2 $49 / mo
+						p Unlimited Matches
+						p Unlimited Messages
+						p Unlimited App Usage
+						button.btn.btn-lg.btn-block.btn-dark(type='button') Sign Up
+			.pricing-column.col-lg-4
+				.card
+					.card-header
+						h3 Mastiff
+					.card-body
+						h2 $99 / mo
+						p Pirority Listing
+						p Unlimited Matches
+						p Unlimited Messages
+						p Unlimited App Usage
+						button.btn.btn-lg.btn-block.btn-dark(type='button') Sign Up
+	// Call to Action
+	section#cta
+		h3.cta-heading Find the True Love of Your Dog&apos;s Life Today.
+		button.download-button.btn.btn-lg.btn-dark(type='button')
+			i.fab.fa-apple
+			| Download
+		button.download-button.btn.btn-lg.btn-light(type='button')
+			i.fab.fa-google-play
+			| Download
+	
+include includes/footer
