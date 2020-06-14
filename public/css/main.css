@@ -3381,7 +3381,7 @@ input, select, textarea {
 		-webkit-align-items: center;
 		-ms-align-items: center;
 		align-items: center;
-		background-image: url("../images/banner.jpg");
+		background-image: url("https://images.unsplash.com/photo-1577375729152-4c8b5fcda381?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80");
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
