@@ -11,6 +11,10 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.get("/", (req, res) => {
+	res.sendFile(`${__dirname}/public/index.html`);
+});
+
+app.get("/api", (req, res) => {
 	res.json({
 		hola: "Hola mundo",
 		name: "Juan",
@@ -19,6 +23,8 @@ app.get("/", (req, res) => {
 	});
 });
 
-app.listen(process.env.PORT || 3000, () =>
+
+
+app.listen(process.env.PORT, () =>
 	console.log("Portfolio is listening.")
 );
