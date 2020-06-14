@@ -23,7 +23,9 @@ app.get("/api", (req, res) => {
 	});
 });
 
-
+app.get('*', (req, res) => {
+	res.send('In construction...');
+});
 
 app.listen(process.env.PORT, () =>
 	console.log("Portfolio is listening.")
