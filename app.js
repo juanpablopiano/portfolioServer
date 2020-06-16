@@ -21,7 +21,8 @@ app.post("/contactme", (req, res) => {
 	const email = req.body.email;
 	const message = req.body.message;
 
-	res.send(`The name's: ${name}, email: ${email}. The message: ${message}`);
+	// res.send(`The name's: ${name}, email: ${email}. The message: ${message}`);
+	res.redirect("/");
 });
 
 app.get("/api", (req, res) => {
